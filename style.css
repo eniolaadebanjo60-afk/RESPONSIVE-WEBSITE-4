@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --gradient-1 :linear-gradient(to bottom right, rgb(107, 107, 255), blue);
+
+    --gradient-2 :linear-gradient(to bottom right, rgb(80, 80, 255), rgb(253, 119, 119));
+
+    --gradient-3 :linear-gradient(to bottom right, rgb(255, 207, 145),rgb(255, 111, 92));
+
+    --gradient-4 :linear-gradient(to bottom right, #2af598, #009efd);
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+body h1{
+    color: #282f59;
+}
+body p{
+    color: #7C7C7C;
+}
+body a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header{
+    background-image: url(header-bg.png);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.nav-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 10px 50px;
+    align-items: center;
+}
+.nav-bar ul{
+    flex: 1;
+    text-align: right;
+}
+.nav-bar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 24px;
+}
+.nav-bar ul li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin:auto;
+    transition: 0.5s ease;
+}
+.nav-bar ul li:hover::after{
+    width: 100%;
+}
+.logo{
+    width: 170px;
+}
+.ctn{
+    padding: 10px 20px;
+    background: red;
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+.ctn:hover{
+    background: var(--gradient-3);
+    color: black;
+}
+.row{
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+    gap: 10rem;
+}
+.header-content ,.hero-img{
+    flex-basis: 50%;
+    padding: 5rem;
+}
+.header-content h1{
+    font-size: 7vmin;
+    margin-bottom: 30px;
+    margin-top: 9rem;
+    color: #4642FF;
+}
+.header-content p{
+    margin-bottom: 20px;
+}
+.learnmore{
+    padding: 10px 20px;
+    border: 1px solid tomato;
+    border-radius: 50px;
+    color: tomato;
+    margin-right: 30px;
+    transition: 0.5s ease;
+}
+.learnmore:hover{
+    background: var(--gradient-3);
+    border: none;
+    color: whitesmoke;
+}
+.hero-img img{
+   margin-left: 80px;
+}
+
+.services{
+    margin-top: 80px;
+}
+.container{
+    padding: 3rem;
+    display: flex;
+}
+.grid-wrapper ,.services-content{
+    flex-basis: 50%;
+}
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1.2fr;
+}
+.grid-box{
+    background: darkslategrey;
+    margin: 10px;
+}
